@@ -1,0 +1,145 @@
+/* Общие стили для всего сайта */
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Навбар */
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #007bff !important;
+}
+
+/* Кнопки категорий */
+.category-btn {
+    margin: 2px;
+    border-radius: 12px;
+}
+
+/* Карточки постов */
+.post-card {
+    transition: transform 0.25s, box-shadow 0.25s;
+    border-radius: 18px;
+    overflow: hidden;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.post-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Кнопки "Прочитать полностью" и "Назад" */
+.btn, .back-btn {
+    border-radius: 12px;
+}
+
+/* Футер */
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Дополнительно: карточки горизонтально для category_detail */
+.posts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.posts-container .post-card {
+    flex: 1 1 calc(33% - 20px); /* три карточки в ряд на больших экранах */
+    min-width: 250px;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .posts-container .post-card {
+        flex: 1 1 100%;
+    }
+}
+
+
+/* Общий фон */
+body {
+    background-color: #f8f9fa;
+}
+
+/* Карточка формы */
+.auth-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.2s;
+}
+
+.auth-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Заголовок */
+.auth-card h3 {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+/* Кнопки */
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    font-weight: 600;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-2px);
+}
+
+/* Ссылки под формой */
+.auth-card p {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.auth-card p a {
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.auth-card p a:hover {
+    text-decoration: underline;
+}
+
+
+.comments-section {
+    max-width: 700px;
+}
+
+.comment {
+    background-color: #f9f9f9;
+    transition: background 0.2s;
+}
+
+.comment:hover {
+    background-color: #f1f1f1;
+}
+
+.comment .avatar img {
+    width: 48px;
+    height: 48px;
+}
+
+.comment-body p {
+    margin: 0;
+}
+

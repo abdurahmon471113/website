@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ category.name }} — MyNewsPortal{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Категория: {{ category.name }}</h2>
+    <p>{{ category.description }}</p>
+    <div class="posts-container mt-4">
+        {% for post in posts %}
+        <div class="card post-card p-3">
+            <h5>{{ post.title }}</h5>
+            <p class="text-muted">{{ post.published_date }}</p>
+            <p>{{ post.description|truncatewords:20 }}</p>
+            <a href="{% url 'posts:post_detail' post.id %}" class="btn btn-primary">Прочитать полностью</a>
+        </div>
+        {% empty %}
+        <p>Постов пока нет.</p>
+        {% endfor %}
+    </div>
+ <a href="{% url 'posts:post_list' %}" class="btn btn-primary back-btn mt-3">Назад к списку постов</a>
+
+
+
+</div>
+{% endblock %}
