@@ -1,5 +1,6 @@
 
 # TODO add steps to start projects
+0. create virtual environemt and activate it (put commands here)
 1. install requirements.txt
 2. create .evn file in root folder and put variables from .env.example
 3. create db "learning_django" in postgres
