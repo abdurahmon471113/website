@@ -13,22 +13,23 @@ It uses PostgreSQL as the database and `.env` for environment variables.
 ```bash
 git clone https://github.com/abdurahmon471113/website.git
 cd website
-Create a virtual environment and activate it:
-
+```
+2. **Create a virtual environment and activate it:**
+```bash
 python -m venv venv
 # On Windows
 venv\Scripts\activate
 # On Linux / Mac
 source venv/bin/activate
-Install dependencies:
-
+```
+3. **Install dependencies:**
+**Install all required packages.**
+```bash
 pip install -r requirements.txt
-Setup environment variables:
-
-Create a .env file in the root folder.
-
-Copy variables from .env.example and update them as needed.
-
+```
+4. **Create a .env file in the root folder.**
+**THEN: Copy variables from .env.example and update them as needed.**
+```bash
 Example .env:
 
 DEBUG=True
@@ -38,15 +39,20 @@ DB_USER=your_db_user
 DB_PASSWORD=your_db_password
 DB_HOST=localhost
 DB_PORT=5432
-Create the PostgreSQL database:
+```
+5. **Create the PostgreSQL database:**
 
-CREATE DATABASE learning_django;
-Run migrations:
-
+6. **CREATE DATABASE learning_django;**
+**Run migrations:**
+```bash
 python manage.py migrate
-Create a superuser (for Django admin):
-
+```
+7. **Create a superuser (for Django admin):**
+```bash
 python manage.py createsuperuser
-Run the development server:
-
+```
+8. **Run the development server:**
+```bash
 python manage.py runserver
+```
+      
